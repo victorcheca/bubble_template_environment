@@ -1,0 +1,144 @@
+//Estilos para centrar la template en pantalla
+body {
+    background-color: "ffffff";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+/* Estilos template */
+.cmprmbb_root {
+    --cmprmbb_position: fixed;
+    --cmprmbb_top: unset;
+    --cmprmbb_left: unset;
+    --cmprmbb_bottom: unset;
+    --cmprmbb_right: unset;
+
+    --cmprmbb_bg_color: #fbfcfc;
+    --cmprmbb_text_color: #000000;
+
+    --cmprmbb_width: 356px;
+    --cmprmbb_height: fit-content;
+    --cmprmbb_fontFamilyPrimary: Montserrat, Arial, sans-serif;
+    --cmprmbb_box_shadow_bb: 1px 1px 5px 0px #00000040;
+    --cmprmbb_border_radius: 10px;
+
+    --cmprmbb_bg_color_btn_cta: #373737;
+    --cmprmbb_text_color_btn_cta: #ffffff;
+
+    --cmprmbb_img_width: 100%;
+    --cmprmbb_img_height: auto;
+    --cmprmbb_img_left: 0;
+    --cmprmbb_img_top: 0;
+    --cmprmbb_img_overflow: hidden;
+
+    margin: 0;
+    position: var(--cmprmbb_position);
+    width: var(--cmprmbb_width);
+    height: var(--cmprmbb_height);
+    top: var(--cmprmbb_top);
+    right: var(--cmprmbb_right);
+    bottom: var(--cmprmbb_bottom);
+    left: var(--cmprmbb_left);
+    box-sizing: border-box;
+    display: block;
+    padding: 0;
+    border-radius: var(--cmprmbb_border_radius);
+    z-index: 999999;
+    background-color: transparent;
+    box-shadow: var(--cmprmbb_box_shadow_bb);
+
+    &.centerX {
+        --cmprmbb_left: 50%;
+        transform: translateX(-50%);
+    }
+    &.centerY {
+        --cmprmbb_top: 50%;
+        transform: translateY(-50%);
+    }
+    &.centerXY {
+        --cmprmbb_left: 50%;
+        --cmprmbb_top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .btn_close {
+        --cmprmbb_background_color_btn_close: #f1f1f1;
+        --cmprmbb_border_color_btn_close: var(
+            --cmprmbb_background_color_btn_close
+        );
+        --cmprmbb_fill_color_btn_close: #9a9a9a;
+        --cmprmbb_diameter_btn_close: 1.5rem;
+        --cmprmbb_box_shadow_btn_close: 0px 0px 5px 1px #00000040;
+
+        background-color: var(--cmprmbb_background_color_btn_close);
+        border: 0.1px solid var(--cmprmbb_border_color_btn_close);
+        border-radius: 50%;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: block;
+        width: var(--cmprmbb_diameter_btn_close);
+        height: var(--cmprmbb_diameter_btn_close);
+        top: 0px;
+        left: 0px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        fill: var(--cmprmbb_fill_color_btn_close);
+        box-shadow: var(--cmprmbb_box_shadow_btn_close);
+        overflow: hidden;
+    }
+
+    & .cmprmbb_content {
+        margin: 0;
+        background-color: var(--cmprmbb_bg_color);
+        color: var(--cmprmbb_text_color);
+        font-size: 14px;
+        font-family: var(--cmprmbb_fontFamilyPrimary);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: var(--cmprmbb_border_radius);
+        text-align: center;
+        &__img {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            border-radius: var(--cmprmbb_border_radius)
+                var(--cmprmbb_border_radius) 0 0;
+            overflow: var(--cmprmbb_img_overflow);
+
+            img {
+                width: var(--cmprmbb_img_width);
+                height: var(--cmprmbb_img_height);
+                margin-left: var(--cmprmbb_img_left);
+                top: var(--cmprmbb_img_top);
+                object-fit: cover;
+                /* border-radius: var(--cmprmbb_border_radius)
+                    var(--cmprmbb_border_radius) 0 0; */
+                aspect-ratio: 16/9;
+                position: relative;
+            }
+        }
+        &__text {
+            padding: 25px;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            &_txt1 {
+                font-family: var(--cmprmbb_fontFamilyPrimary);
+                font-size: 18px;
+                line-height: 24px;
+                color: var(--cmprmbb_text_color);
+                margin: 0;
+            }
+        }
+        
+    }
+}
